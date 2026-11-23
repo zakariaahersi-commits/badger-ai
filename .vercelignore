@@ -1,0 +1,10 @@
+# Runtime deployments do not need product research, generated campaign media,
+# database tooling, or test sources. Keeping these out also prevents unrelated
+# local artifacts from entering a production upload.
+docs/
+promo/
+scripts/
+supabase/
+tests/
+*.md
+playwright.config.ts

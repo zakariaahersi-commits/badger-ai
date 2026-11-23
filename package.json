@@ -1,0 +1,48 @@
+{
+  "name": "bygga",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "test:coach": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:launch": "node scripts/launch-readiness.mjs",
+    "ops:diagnose": "node scripts/company-os-diagnostics.mjs",
+    "ops:diagnose-acquisition": "node scripts/acquisition-system-diagnostics.mjs",
+    "ops:diagnose-onboarding": "node scripts/onboarding-funnel-diagnostics.mjs",
+    "ops:test-agent-ai": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/company-agent-ai-smoke.mjs",
+    "ops:test-scheduler": "node scripts/company-scheduler-smoke.mjs",
+    "ops:test-email": "node scripts/company-email-proof.mjs",
+    "ops:test-engineering": "node scripts/company-engineering-proof.mjs",
+    "ops:test-actions": "node scripts/company-action-scheduler-smoke.mjs",
+    "test:production-ai": "node --env-file=.env.local scripts/production-ai-smoke.mjs",
+    "test:supabase": "node scripts/supabase-smoke.mjs"
+  },
+  "dependencies": {
+    "@layers/client": "3.1.2",
+    "@supabase/supabase-js": "^2.108.1",
+    "@types/web-push": "3.6.4",
+    "next": "16.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resend": "^6.12.4",
+    "stripe": "^22.2.0",
+    "svix": "^1.99.1",
+    "web-push": "3.6.7",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "crons": [
+    {
+      "path": "/api/nudge",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/nudge?edition=evening",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/actions/run",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/wakes/run",
+      "schedule": "7,22,37,52 * * * *"
+    },
+    {
+      "path": "/api/checkout/recover",
+      "schedule": "20 * * * *"
+    },
+    {
+      "path": "/api/company/run",
+      "schedule": "3,13,23,33,43,53 * * * *"
+    },
+    {
+      "path": "/api/company/actions/run",
+      "schedule": "5,20,35,50 * * * *"
+    },
+    {
+      "path": "/api/company/brief",
+      "schedule": "17 * * * *"
+    },
+    {
+      "path": "/api/company/trends",
+      "schedule": "35 5 * * *"
+    }
+  ]
+}
