@@ -148,7 +148,9 @@ test("the private Company OS becomes a desktop control room at wide viewports", 
   await expect(page.getByTestId("desktop-agent-table")).toBeVisible();
   await expect(page.getByTestId("desktop-agent-row")).toHaveCount(8);
   await expect(page.getByRole("heading", { name: "Pending decisions" })).toBeVisible();
-  await expect(page.getByText("Controlled proof: document the engineering connection")).toBeVisible();
+  const actionTitle = "Controlled proof: document the engineering connection";
+  await expect(page.getByRole("heading", { name: actionTitle })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Action board" }).getByText(actionTitle)).toBeVisible();
   await expect(page.getByRole("img", { name: "Bo writing the founder's next move" })).toBeVisible();
   await expect(page.getByTestId("prepared-only")).toBeVisible();
   await expect(page.getByTestId("ugc-production-brief")).toBeVisible();

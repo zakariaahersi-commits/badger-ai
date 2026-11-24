@@ -27,9 +27,6 @@ test("mobile landing explains Bo without horizontal overflow", async ({ page }) 
     page: document.documentElement.scrollWidth,
   }));
   expect(widths.page).toBeLessThanOrEqual(widths.viewport + 1);
-
-  await page.getByRole("button", { name: "Show feedback 2 of 5" }).click();
-  await expect(page.getByText(/Bo is actually following up with you, rather than just giving you a task and disappearing/)).toBeVisible();
 });
 
 test("the installable PWA assets remain available after removing the landing-page distraction", async ({ request }) => {
